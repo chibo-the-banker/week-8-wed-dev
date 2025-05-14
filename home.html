@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Haven - Home</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFF9F0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: #A91B0D;
+            color: #FFD700;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin: 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        li a ,button {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        button,li a:hover {
+            background-color: #FFD700;
+            color: #A91B0D;
+        }
+        
+        main {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+        
+        img:hover {
+            transform: scale(1.02);
+        }
+        
+        footer {
+            background-color: #A91B0D;
+            color: #FFD700;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="services.html">services</a></li>
+            </ul>
+        </nav>
+        <h1 class="openModal">Spice Haven</h1>
+        <div class="modal" style="display: none; background-color: #A91B0D;
+            color: #FFD700;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;"> <form action="">
+            <input type="email" required placeholder="Place your email here....">
+            <input type="text" placeholder="Comment here">
+            <button class="closeModal">Close</button>
+        </form></div>
+    </header>
+    
+    <main>
+        <img src="chilli.jpg" alt="Spicy chillies">
+        <img src="butter.jpg" alt="Flavored butter">
+    </main>
+    
+    <footer>&copy; 2025 Spice Haven. All rights reserved.</footer>
+    <script>
+
+    const openModal = document.querySelector(".openModal");
+    const modal = document.querySelector(".modal");
+    const closeModal = document.querySelector(".closeModal");
+
+    openModal.addEventListener("click", function() {
+        if (modal.style.display === "none") {
+            modal.style.display = "block";
+        } else {
+            modal.style.display = "none";
+        }
+    });
+
+    closeModal.addEventListener("click", function(e) {
+        e.preventDefault(); // Prevent form submission
+        modal.style.display = "none";
+    });
+</script>
+    </script>
+</body>
+</html>
